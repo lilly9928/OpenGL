@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1397D58424F4D29700A4ED76 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1397D58324F4D29700A4ED76 /* main.cpp */; };
+		1397D58C24F4D34900A4ED76 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1397D58B24F4D34900A4ED76 /* OpenGL.framework */; };
+		1397D58E24F4D37500A4ED76 /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1397D58D24F4D37500A4ED76 /* libGLEW.2.1.0.dylib */; };
+		1397D59024F4D39300A4ED76 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1397D58F24F4D39300A4ED76 /* libglfw.3.3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,11 @@
 /* Begin PBXFileReference section */
 		1397D58024F4D29700A4ED76 /* opengltest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = opengltest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1397D58324F4D29700A4ED76 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		1397D58B24F4D34900A4ED76 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		1397D58D24F4D37500A4ED76 /* libGLEW.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.1.0.dylib; path = ../../../../../usr/local/lib/libGLEW.2.1.0.dylib; sourceTree = "<group>"; };
+		1397D58F24F4D39300A4ED76 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../usr/local/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
+		1397D59124F4D5A700A4ED76 /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = ../../../../../usr/local/lib/libglfw.3.dylib; sourceTree = "<group>"; };
+		1397D59324F4DD0000A4ED76 /* opengltest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = opengltest.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +40,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1397D59024F4D39300A4ED76 /* libglfw.3.3.dylib in Frameworks */,
+				1397D58E24F4D37500A4ED76 /* libGLEW.2.1.0.dylib in Frameworks */,
+				1397D58C24F4D34900A4ED76 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +54,7 @@
 			children = (
 				1397D58224F4D29700A4ED76 /* opengltest */,
 				1397D58124F4D29700A4ED76 /* Products */,
+				1397D58A24F4D34900A4ED76 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +69,21 @@
 		1397D58224F4D29700A4ED76 /* opengltest */ = {
 			isa = PBXGroup;
 			children = (
+				1397D59324F4DD0000A4ED76 /* opengltest.entitlements */,
 				1397D58324F4D29700A4ED76 /* main.cpp */,
 			);
 			path = opengltest;
+			sourceTree = "<group>";
+		};
+		1397D58A24F4D34900A4ED76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1397D59124F4D5A700A4ED76 /* libglfw.3.dylib */,
+				1397D58F24F4D39300A4ED76 /* libglfw.3.3.dylib */,
+				1397D58D24F4D37500A4ED76 /* libGLEW.2.1.0.dylib */,
+				1397D58B24F4D34900A4ED76 /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,19 +262,28 @@
 		1397D58824F4D29700A4ED76 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = opengltest/opengltest.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6MXGU6GTZD;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
 		1397D58924F4D29700A4ED76 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = opengltest/opengltest.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6MXGU6GTZD;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -265,7 +298,7 @@
 				1397D58624F4D29700A4ED76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		1397D58724F4D29700A4ED76 /* Build configuration list for PBXNativeTarget "opengltest" */ = {
 			isa = XCConfigurationList;
@@ -274,7 +307,7 @@
 				1397D58924F4D29700A4ED76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
