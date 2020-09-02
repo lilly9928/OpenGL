@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1397D5A124F50FB300A4ED76 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1397D5A024F50FB300A4ED76 /* main.cpp */; };
+		1397D5A124F50FB300A4ED76 /* creating_window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1397D5A024F50FB300A4ED76 /* creating_window.cpp */; };
 		1397D5AD24F5101C00A4ED76 /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1397D5AB24F5101C00A4ED76 /* libGLEW.2.1.0.dylib */; };
 		1397D5AE24F5101C00A4ED76 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1397D5AC24F5101C00A4ED76 /* libglfw.3.3.dylib */; };
 		1397D5AF24F512D200A4ED76 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1397D5A924F5100000A4ED76 /* OpenGL.framework */; };
@@ -28,7 +28,7 @@
 
 /* Begin PBXFileReference section */
 		1397D59D24F50FB300A4ED76 /* 2_1_opengl */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 2_1_opengl; sourceTree = BUILT_PRODUCTS_DIR; };
-		1397D5A024F50FB300A4ED76 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		1397D5A024F50FB300A4ED76 /* creating_window.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = creating_window.cpp; sourceTree = "<group>"; };
 		1397D5A724F50FC200A4ED76 /* 2_1_opengl.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 2_1_opengl.entitlements; sourceTree = "<group>"; };
 		1397D5A924F5100000A4ED76 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		1397D5AB24F5101C00A4ED76 /* libGLEW.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.1.0.dylib; path = ../../../../../../../usr/local/lib/libGLEW.2.1.0.dylib; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				1397D5A724F50FC200A4ED76 /* 2_1_opengl.entitlements */,
-				1397D5A024F50FB300A4ED76 /* main.cpp */,
+				1397D5A024F50FB300A4ED76 /* creating_window.cpp */,
 			);
 			path = 2_1_opengl;
 			sourceTree = "<group>";
@@ -144,7 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1397D5A124F50FB300A4ED76 /* main.cpp in Sources */,
+				1397D5A124F50FB300A4ED76 /* creating_window.cpp in Sources */,
 				13FFAD7624FE281800B7FC88 /* glad.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
