@@ -66,7 +66,7 @@ int main()
 
 void processInput(GLFWwindow *window)
 {
-    //키보드 키 입력 받기 ,,esc 버튼 눌렸는지 확인 
+    //키보드 키 입력 받기 ,,esc 버튼 눌렸는지 확인
     if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
 }
