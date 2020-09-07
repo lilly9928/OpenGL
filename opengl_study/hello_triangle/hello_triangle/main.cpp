@@ -122,18 +122,15 @@ int main()
     unsigned int VBO, VAO;
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
-    // bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
     glBindVertexArray(VAO);
-
+    //점정 배열 버퍼에 복사
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-    //glVertexAttribPointer: 오픈지엘에게 vertex데이터 해석 방법을 알려줄 수 있음
+    //glVertexAttribPointer: 오픈지엘에게 vertex데이터 해석 방법을 알려줄 수 있음 (vertex 속성 포인터 설정)
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-    //glVertexAttribPointer(설정할 vertex 속성 지정 , vertex속성의 크기 , 데이터 타입 , 데이터 정규화 유무 , vertex속성 세트들 사이의 공백, void* 형변환
+    //glVertexAttribPointer(설정할 vertex 속성 지정 , vertex속성의 크기 , 데이터 타입 , 데이터 정규화 유무 , vertex속성 세트들 사이의 공백, void* 형변환 )
     glEnableVertexAttribArray(0);
-
     glBindBuffer(GL_ARRAY_BUFFER, 0);
-
     glBindVertexArray(0);
 
 
